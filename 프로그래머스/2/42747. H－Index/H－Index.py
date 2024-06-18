@@ -1,5 +1,5 @@
 def solution(citations):
-    citations.sort(reverse=True)  # 인용 횟수를 내림차순으로 정렬합니다.
+    citations.sort(reverse=True)  
     h_index = 0
     
     for i in range(len(citations)):
