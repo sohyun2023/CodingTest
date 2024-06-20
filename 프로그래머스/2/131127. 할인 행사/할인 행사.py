@@ -1,7 +1,7 @@
 def solution(want, number, discount):
     from collections import Counter
 
-    want_dict = dict(zip(want, number))
+    want_dict = dict(zip(want, number)) #딕셔너리로
     want_length = len(discount)
 
     def matches(want_dict, current_window):
