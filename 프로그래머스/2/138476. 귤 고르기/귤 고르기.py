@@ -1,5 +1,5 @@
 from collections import Counter
-
+# 라이브러리
 
 def solution(k, tangerine):
     freq = Counter(tangerine).values()
