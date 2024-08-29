@@ -1,7 +1,7 @@
 import datetime
 
 def solution(a, b):
-    date = datetime.date(2016, a, b)
+    date = datetime.date(2016, a, b)  #datetime
     요일 = date.weekday()
     
 
