@@ -1,9 +1,7 @@
 
 def solution(arr):
-    list=[arr[0]]
-    n=len(arr)
-    for i in range(0,n-1):
-        if arr[i]!=arr[i+1]:
-                list.append(arr[i+1])
-    return list
-        
+    stack=[arr[0]]
+    for i in arr[1:]:
+        if stack[-1] != i:
+            stack.append(i)
+    return stack
