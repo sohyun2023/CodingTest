@@ -1,20 +1,20 @@
-import pandas as pd
 
+from itertools import combinations
+from collections import Counter
 def solution(clothes):
+    sum=0
+    multi=1
+    closet= {}
+    for list in clothes:
+        if list[1] not in closet:
+            closet[list[1]]=[]
+        closet[list[1]].append(list[0])
     
-    df = pd.DataFrame(clothes, columns=['name', 'type'])
+    for key in closet:
+        closet[key]=len(closet[key])
+    print(closet)
+        
+    for key in closet:
+        multi=  multi * (closet[key] +1)
     
-    
-    new_df = df['type'].value_counts().reset_index()
-    new_df.columns = ['type', 'count']
-    
-    totalsum = 1
-    
-    
-    for count in new_df['count']:
-        totalsum *= (count + 1)
-    
-    
-    totalsum -= 1
-    
-    return totalsum
+    return multi-1
