@@ -6,9 +6,9 @@ def solution(genres, plays):
             genre_sum[genres[i]]=genre_sum[genres[i]] + plays[i]
         else:
             genre_sum[genres[i]]=genre_sum[genres[i]] + plays[i]
-    
+    print(genre_sum)
     genre_sum= sorted(genre_sum.items(), key=lambda x: x[1], reverse=True)
-    
+    print(genre_sum)
     
     music={}
     new_plays=[]
