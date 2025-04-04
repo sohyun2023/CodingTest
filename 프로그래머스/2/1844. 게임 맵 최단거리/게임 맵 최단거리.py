@@ -20,7 +20,7 @@ def solution(maps):
                     queue.append((nx,ny))
 
 
-        return maps[n-1][m-1]
+        return maps[n-1][m-1]#
     if bfs(0,0) ==1:
         return -1
     else:
